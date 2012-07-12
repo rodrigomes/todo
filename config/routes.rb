@@ -12,7 +12,7 @@ Todo::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   resources :tarefas
-  match 'tarefas/:id' => 'tarefas#destroy', :as => :delete_tarefa 
+  #match 'tarefas/:id' => 'tarefas#destroy', :as => :destroy_tarefa 
 
   # Sample resource route with options:
   #   resources :products do

@@ -35,7 +35,7 @@ class TarefasController < ApplicationController
 	def destroy
 		@tarefa = Tarefa.find(params[:id])
 		@tarefa.destroy
-		flash[:notice] = "Voce destrui o elemento"
+		flash[:notice] = "Voce destrui a tarefa #{@tarefa.nome}"
 		redirect_to tarefas_path
 	end
 
