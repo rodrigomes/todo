@@ -4,4 +4,8 @@ class TarefasController < ApplicationController
 		@tarefa = Tarefa.new
 	end
 
+	def create
+		puts "chegou no create"
+	end
+
 end

@@ -1,11 +1,17 @@
 <h2> Nova Tarefa <h2>
 
 	<%= form_for @tarefa do |f| %>
-		<%= f.label "Descrição" %>
-		<%= f.text_area :descricao %>
-		<%= f.text_field :responsavel %>
-		<%= f.label "Data Conclusão" %>
-		<%= f.date_select :data_fim, :start_year => Time.now.year %>
+		<p>
+			<%= f.label "Descrição" %>
+			<%= f.text_area :descricao %>
+		</p>
+		<p>
+			<%= f.label "Responsável" %>
+			<%= f.text_field :responsavel %>
+		</p>
+		<p>
+			<%= f.label "Data Conclusão" %>
+			<%= f.date_select :data_fim, :start_year => Time.now.year %>
 		<br />
 		<%= f.submit %>
 	<%= end %>
