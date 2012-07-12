@@ -1,0 +1,18 @@
+<h2> Lista de Tarefas </h2>
+
+link_to
+
+	<table>
+		<tr>
+			<th>Responsavel</th>
+			<th>Descrição</th>
+			<th>Data de Entrega</th>
+		</tr>
+		<% @tarefas.each do |tarefa| %>
+			<tr>
+				<td><%= tarefa.responsavel %></td>
+				<td><%= tarefa.descricao %></td>
+				<td><%= tarefa.data_fim %></td>
+			</tr>
+		<% end %>
+	</table>
