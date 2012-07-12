@@ -5,7 +5,8 @@ class TarefasController < ApplicationController
 	end
 
 	def create
-		puts "chegou no create"
+		@tarefa = Tarefa.new(params[:tarefa])
+		@tarefa.save
 	end
 
 end
