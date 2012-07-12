@@ -6,7 +6,9 @@ class TarefasController < ApplicationController
 
 	def create
 		@tarefa = Tarefa.new(params[:tarefa])
-		@tarefa.save
+		unless @tarefa.save 
+			redirect_to :action => new
+		end
 	end
 
 end
