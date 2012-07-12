@@ -1,5 +1,7 @@
 <h2> Lista de Tarefas </h2>
 
+<p class ="notice"><%= flash[:notice] %></p>
+
 <%= link_to "Nova Tarefa" , new_tarefa_path %><br/><br/>
 
 	<table>
@@ -13,6 +15,7 @@
 				<td><%= tarefa.responsavel %></td>
 				<td><%= tarefa.descricao %></td>
 				<td><%= tarefa.data_fim %></td>
+				<td>"editar</td>
 			</tr>
 		<% end %>
 	</table>

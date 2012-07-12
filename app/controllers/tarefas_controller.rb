@@ -10,8 +10,9 @@ class TarefasController < ApplicationController
 
 	def create
 		@tarefa = Tarefa.new(params[:tarefa])
-		unless @tarefa.save 
-			redirect_to new_tarefa_path
+		if @tarefa.save
+			flash[:notice] = "Tarefa criada com sucesso"
+			redirect_to tarefas_path
 		end
 	end
 
