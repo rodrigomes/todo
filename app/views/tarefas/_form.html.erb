@@ -1,0 +1,18 @@
+	<%= form_for @tarefa do |f| %>
+		<p>
+			<%= f.label "Descrição" %> <br/>
+			<%= f.text_area :descricao, :rows => 10 %>
+		</p>
+		<p>
+			<%= f.label "Responsável" %>
+			<%= f.text_field :responsavel %>
+		</p>
+		<p>
+			<%= f.label "Data Conclusão" %>
+			<%= f.date_select :data_fim, :start_year => Time.now.year, :order => [:day, :month, :year] %>
+		<p>
+		<br />	
+		<%= f.submit :value => "Criar Tarefa" %>
+	<% end %>
+	<br/>
+	

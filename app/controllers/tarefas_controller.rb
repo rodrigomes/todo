@@ -16,4 +16,14 @@ class TarefasController < ApplicationController
 		end
 	end
 
+	def edit
+		@tarefa = Tarefa.find(params[:id])
+	end
+
+	def update
+		@tarefas = Tarefa.find(params[:id])
+		@tarefa.update_attributes(params[:tarefa])
+
+	end
+
 end

@@ -15,7 +15,7 @@
 				<td><%= tarefa.responsavel %></td>
 				<td><%= tarefa.descricao %></td>
 				<td><%= tarefa.data_fim %></td>
-				<td>"editar</td>
+				<td><%= link_to "Edit" , edit_tarefa_path(tarefa) %></td>
 			</tr>
 		<% end %>
 	</table>
