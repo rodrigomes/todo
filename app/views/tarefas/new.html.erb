@@ -13,10 +13,11 @@
 			<%= f.label "Data Conclusão" %>
 			<%= f.date_select :data_fim, :start_year => Time.now.year, :order => [:day, :month, :year] %>
 		<p>
-		<br />
+		<br />	
 		<%= f.submit :value => "Criar Tarefa" %>
 	<% end %>
-
+	<br/>
+	<%= link_to "Voltar" , tarefas_path %><br/>
 
 
 
