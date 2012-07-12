@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712180642) do
+ActiveRecord::Schema.define(:version => 20120712205351) do
 
   create_table "tarefas", :force => true do |t|
     t.string   "descricao"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20120712180642) do
     t.string   "responsavel"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "nome"
   end
 
 end
