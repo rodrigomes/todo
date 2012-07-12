@@ -18,7 +18,7 @@
 				<td><%= tarefa.descricao %></td>
 				<td><%= tarefa.data_fim %></td>
 				<td><%= link_to "Edit" , edit_tarefa_path(tarefa) %></td>
-				<td><%= link_to "Deletar" , tarefas_path(tarefa), :method => :delete, :confirm => "Tem certeza?" %></td>
+				<td><%= link_to "Deletar" , delete_tarefa_path(tarefa), :confirm => "Tem certeza?" %></td>
 			</tr>
 		<% end %>
 	</table>
