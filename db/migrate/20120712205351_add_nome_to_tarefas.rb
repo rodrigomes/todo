@@ -4,6 +4,6 @@ class AddNomeToTarefas < ActiveRecord::Migration
   end
 
   def down
-  	remove_column :tarefa, :nome
+  	remove_column :tarefas, :nome
   end
 end

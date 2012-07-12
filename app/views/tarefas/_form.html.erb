@@ -1,5 +1,9 @@
 	<%= form_for @tarefa do |f| %>
 		<p>
+			<%= f.label "Nome" %> <br/>
+			<%= f.text_field :nome %>
+		</p>
+		<p>
 			<%= f.label "Descrição" %> <br/>
 			<%= f.text_area :descricao, :rows => 10 %>
 		</p>

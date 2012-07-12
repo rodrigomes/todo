@@ -21,10 +21,13 @@ class TarefasController < ApplicationController
 	end
 
 	def update
-		@tarefas = Tarefa.find(params[:id])
-		if @tarefa.update_attributes(params[:tarefas])
-			flash[:notice] = "Tarefa #{@tarefa.descricao} atualizada com sucesso"
+		@tarefa = Tarefa.find(params[:id])
+		if @tarefa.update_attributes(params[:tarefa])
+			flash[:notice] = "Tarefa #{@tarefa.nome} atualizada com sucesso"
 			redirect_to tarefas_path
+		else
+			flash[:notice] = @tarefa.errors
+			redirect_to edit_tarefa_path
 		end
 
 	end

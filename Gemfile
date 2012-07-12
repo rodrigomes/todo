@@ -39,3 +39,5 @@ group :development, :test do
 	gem 'rspec' , "2.7.0"
 	gem 'rspec-rails', "2.7.0"
 end
+
+gem 'dynamic_form'

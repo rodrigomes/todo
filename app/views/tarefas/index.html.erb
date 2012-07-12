@@ -6,12 +6,14 @@
 
 	<table>
 		<tr>
+			<th>Nome</th>
 			<th>Responsavel</th>
 			<th>Descrição</th>
 			<th>Data de Entrega</th>
 		</tr>
 		<% @tarefas.each do |tarefa| %>
 			<tr>
+				<td><%= tarefa.nome %></td>
 				<td><%= tarefa.responsavel %></td>
 				<td><%= tarefa.descricao %></td>
 				<td><%= tarefa.data_fim %></td>
