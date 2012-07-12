@@ -32,4 +32,11 @@ class TarefasController < ApplicationController
 
 	end
 
+	def destroy
+		@tarefa = Tarefa.find(params[:id])
+		@tarefa.destroy
+		flash[:notice] = "Voce destrui o elemento"
+		redirect_to tarefas_path
+	end
+
 end
