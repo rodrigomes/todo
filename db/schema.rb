@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20120713152950) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "nome"
-    t.integer  "projectid"
+    t.integer  "projeto_id"
   end
 
 end

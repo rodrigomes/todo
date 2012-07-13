@@ -3,4 +3,6 @@ class Tarefa < ActiveRecord::Base
 
   validates_presence_of :responsavel
 
+  belongs_to :projeto
+
 end
