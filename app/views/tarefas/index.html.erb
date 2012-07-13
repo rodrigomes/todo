@@ -11,6 +11,7 @@
 			<th>Responsavel</th>
 			<th>Descrição</th>
 			<th>Data de Entrega</th>
+			<th>Projeto</th>
 		</tr>
 		<% @tarefas.each do |tarefa| %>
 			<tr>
@@ -18,6 +19,11 @@
 				<td><%= tarefa.responsavel %></td>
 				<td><%= tarefa.descricao %></td>
 				<td><%= tarefa.data_fim %></td>
+				<% unless tarefa.projeto.nil? %>
+					<td><%= tarefa.projeto.nome %></td>
+				<% else %>
+					<td>sem projeto</td>
+				<% end %>
 				<td><%= link_to "Edit" , edit_tarefa_path(tarefa) %></td>
 				<td><%= link_to "Deletar" , tarefa_path(tarefa) , :confirm => "Tem certeza?", :method => :delete %></td>
 			</tr>

@@ -5,7 +5,8 @@ class TarefasController < ApplicationController
 	end
 
 	def index
-		@tarefas = Tarefa.all
+		#@tarefas = Tarefa.all
+		@tarefas = Tarefa.includes(:projeto).all
 	end
 
 	def create
