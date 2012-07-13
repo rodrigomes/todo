@@ -26,7 +26,7 @@ class TarefasController < ApplicationController
 			flash[:notice] = "Tarefa #{@tarefa.nome} atualizada com sucesso"
 			redirect_to tarefas_path
 		else
-			flash[:notice] = @tarefa.errors
+			flash[:notice] = @tarefa.errors.messages
 			redirect_to edit_tarefa_path
 		end
 
