@@ -15,6 +15,10 @@
 			<%= f.label "Data Conclusão" %>
 			<%= f.date_select :data_fim, :start_year => Time.now.year, :order => [:day, :month, :year] %>
 		<p>
+		<p>
+			<%= f.label "Projeto" %>
+			<%= collection_select(:tarefa, :projeto_id, Projeto.all, :id, :nome) %>
+		<p>
 		<br />	
 		<%= f.submit :value => "Salvar" %>
 	<% end %>
