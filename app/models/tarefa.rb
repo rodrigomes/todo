@@ -5,4 +5,9 @@ class Tarefa < ActiveRecord::Base
 
   belongs_to :projeto
 
+  def nome_do_projeto
+  	return "sem projeto" if projeto.nil?
+  	projeto.nome
+  end
+
 end
