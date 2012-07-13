@@ -7,6 +7,7 @@ class ProjetosController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @projetos }
+      format.xml { render xml: @projetos }
     end
   end
 
