@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :data_inicio %><br />
-    <%= f.date_select :data_inicio %>
+    <%= f.date_select :data_inicio , :order => [:day, :month, :year]  %>
   </div>
   <div class="field">
     <%= f.label :data_fim %><br />
-    <%= f.date_select :data_fim %>
+    <%= f.date_select :data_fim , :order => [:day, :month, :year] %>
   </div>
   <div class="field">
     <%= f.label :cliente %><br />
