@@ -7,6 +7,8 @@ class Projeto < ActiveRecord::Base
   validate :primeira_letra_maiuscula
   validates :nome, :uniqueness => true
 
+  has_many :tarefas
+
   private
   
   def validate_presence_of_data_inicio_menor_igual_a_data_fim
