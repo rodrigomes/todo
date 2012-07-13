@@ -19,7 +19,7 @@
 				<td><%= tarefa.responsavel %></td>
 				<td><%= tarefa.descricao %></td>
 				<td><%= tarefa.data_fim %></td>
-				<td><%= tarefa.nome_do_projeto %></td>
+				<td><%= tarefa_nome_do_projeto %></td>
 				<td><%= link_to "Edit" , edit_tarefa_path(tarefa) %></td>
 				<td><%= link_to "Deletar" , tarefa_path(tarefa) , :confirm => "Tem certeza?", :method => :delete %></td>
 			</tr>
