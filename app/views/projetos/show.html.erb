@@ -24,6 +24,26 @@
   <b>Descricao:</b>
   <%= @projeto.descricao %>
 </p>
+<br/>
+<hr/>
+<h3>Tarefas</h3>
+<table>
+    <tr>
+      <th>Nome</th>
+      <th>Responsavel</th>
+      <th>Descrição</th>
+      <th>Data de Entrega</th>
+    </tr>
+    <% @projeto.tarefas.each do |tarefa| %>
+      <tr>
+        <td><%= tarefa.nome %></td>
+        <td><%= tarefa.responsavel %></td>
+        <td><%= tarefa.descricao %></td>
+        <td><%= tarefa.data_fim %></td>
+      </tr>
+    <% end %>
+</table>
+<hr/>
 
 
 <%= link_to 'Edit', edit_projeto_path(@projeto) %> |
